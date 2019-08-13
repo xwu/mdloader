@@ -142,7 +142,8 @@ enum command {
     CMD_DOWNLOAD,
     CMD_UPLOAD,
     CMD_TEST,
-    CMD_ABORT
+    CMD_ABORT,
+    CMD_READ_USER_ROW
 };
 
 extern struct option long_options[];
@@ -181,6 +182,7 @@ int write_data(int addr, int writesize, int data);
 void list_devices(char *first);
 void strupper(char *str);
 void strlower(char *str);
+int read_user_row(void);
 
 #endif //_MDLOADER_COMMON_H
 
